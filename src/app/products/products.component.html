@@ -20,7 +20,7 @@
             <td>{{p.c_date}}</td>
             <td>{{p.c_view}}</td>
             <td>
-              <a>
+              <a [routerLink]="['/product', p.id]">
                 <i class="fas fa-eye"></i>
             </a>
           </td>

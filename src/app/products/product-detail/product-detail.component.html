@@ -1,0 +1,27 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ตอน</th>
+              <th scope="col">วันที่</th>
+              <th scope="col">ระยะเวลา</th>
+              <th scope="col">จำนวนผู้เข้าชม</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let p of productDetail">
+              <td>{{p.ch_title}}</td>
+              <td>{{p.ch_dateadd}}</td>
+              <td>{{p.ch_timetotal}}</td>
+              <td>{{p.ch_view}}</td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
