@@ -4,10 +4,11 @@
       <div class="col-md-12">
         <h3>News</h3>
         <div class="card mb-3" *ngFor="let a of article">
-          <img [src]=a.urlToImage class="card-img-top" [alt]=a.source.name>
+          <img *ngIf="a.urlToImage" [src]=a.urlToImage class="card-img-top" [alt]=a.source.name>
           <div class="card-body">
             <h5 class="card-title">{{a.title}}</h5>
             <p class="card-text">{{a.content}}</p>
+            <a [href]="a.url" class="stretched-link" target="_blank" rel="noopener noreferrer"></a>
             <p class="card-text float-md-left"><small class="text-muted">{{a.source.name}}</small></p>
             <p class="card-text float-md-right"><small class="text-muted">{{a.publishedAt}}</small></p>
           </div>
