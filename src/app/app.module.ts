@@ -13,6 +13,8 @@ import { ProductDetailComponent } from './products/product-detail/product-detail
 import { NewsComponent } from './news/news.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AdtobePipe } from './shared/adtobe.pipe';
+import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,14 @@ import { AdtobePipe } from './shared/adtobe.pipe';
     ProductDetailComponent,
     NewsComponent,
     PagenotfoundComponent,
-    AdtobePipe
+    AdtobePipe,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

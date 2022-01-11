@@ -1,3 +1,4 @@
+import { RegisterComponent } from './register/register.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { NewsComponent } from './news/news.component';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path : 'product', component:ProductsComponent},
   {path : 'product/:id', component:ProductDetailComponent},
   {path : 'news', component:NewsComponent},
+  {path : 'register', component:RegisterComponent},
   {path : 'dashboard', loadChildren:'./dashboard/dashboard.module#DashboardModule'},
 
   {path : '**', component:PagenotfoundComponent},
