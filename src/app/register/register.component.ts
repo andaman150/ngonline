@@ -1,4 +1,6 @@
+import { AuthService } from './../shared/auth.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -19,7 +21,7 @@ export class RegisterComponent implements OnInit {
     ]
   };
 
-  constructor() { }
+  constructor( private authService: AuthService, private router : Router ) { }
 
   ngOnInit() {
   }
@@ -27,6 +29,16 @@ export class RegisterComponent implements OnInit {
   register(formValue: any) {
 
     console.log(formValue);
+    this.authService.register(formValue).subscribe(
+      (response) => {
+        if (response.status === 'ok') {
+          alert(response.message);
+          this.router.navigate(['/']);
+        } else {
+          alert(response.message);
+        }
+      }
+    )
 
   }
 }
